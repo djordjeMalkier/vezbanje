@@ -15,4 +15,9 @@ public class HelloWorldController {
     public String reciZdravo() {
         return "Zdravo Nikola";
     }
+
+    @GetMapping("/pozdrav")
+    public String reciPozdrav() {
+        return "Pozdrav Djordje";
+    }
 }
