@@ -20,7 +20,6 @@ public class HelloWorldController {
 
     @GetMapping("/funkcionalnost")
     public String funkcionalnost() {
-        System.out.println("funkcionalnost");
         return "funkcionalnost";
     }
 }
