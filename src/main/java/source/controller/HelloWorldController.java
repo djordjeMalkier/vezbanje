@@ -8,6 +8,7 @@ public class HelloWorldController {
 
     @GetMapping("/zdravo")
     public String reciZdravo() {
+        System.out.println("komentar");
         return "Zdravo Nikola";
     }
 
