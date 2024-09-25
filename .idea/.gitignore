@@ -1,0 +1,23 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+/.idea/.gitignore
+/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+/.idea/encodings.xml
+/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+/target/classes/source/controller/HelloWorldController.class
+/.idea/sonarlint/issuestore/index.pb
+/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+/.idea/jarRepositories.xml
+/.idea/misc.xml
+/target/classes/app/MySpringBootApplication.class
+/target/maven-archiver/pom.properties
+/target/SpringVezbanje-1.0-SNAPSHOT.jar
+/target/SpringVezbanje-1.0-SNAPSHOT.jar.original
+/.idea/uiDesigner.xml
