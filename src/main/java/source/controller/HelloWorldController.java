@@ -17,4 +17,10 @@ public class HelloWorldController {
         System.out.println("test");
         return "Pozdrav Djordje";
     }
+
+    @GetMapping("/funkcionalnost")
+    public String funkcionalnost() {
+        System.out.println("funkcionalnost");
+        return "funkcionalnost";
+    }
 }
