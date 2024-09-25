@@ -13,6 +13,7 @@ public class HelloWorldController {
 
     @GetMapping("/pozdrav")
     public String reciPozdrav() {
+        System.out.println("test");
         return "Pozdrav Djordje";
     }
 }
