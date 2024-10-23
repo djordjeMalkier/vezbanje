@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import source.service.HelloServiceImpl;
+import source.aop.LogAudit;;
 
 @RestController
 @RequestMapping("/knjige")
@@ -15,15 +15,17 @@ public class HelloWorldController {
     @Autowired
     HelloService helloService;
 
+    @LogAudit
     @GetMapping("/zdravo")
     public String reciZdravo() {
-        String poruka = helloService.vratiPoruku();
-        return poruka;
+        return helloService.vratiPoruku();
     }
 
+    @LogAudit
     @GetMapping("/pozdrav")
-    public String reciPozdrav() {
+    public String reciPozdrav() throws InterruptedException {
         System.out.println("test");
+        Thread.sleep(3000);
         return "Pozdrav Djordje";
     }
 
@@ -31,4 +33,6 @@ public class HelloWorldController {
     public String funkcionalnost() {
         return "funkcionalnost";
     }
+
+
 }
