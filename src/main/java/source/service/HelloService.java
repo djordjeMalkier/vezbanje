@@ -1,4 +1,4 @@
-package source.controller;
+package source.service;
 
 public interface HelloService {
 
