@@ -1,10 +1,8 @@
 package source.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 
@@ -16,8 +14,26 @@ public class Book {
     private String title;
     private BigDecimal price;
 
+    @ManyToOne
+    @JoinColumn(name = "writer_id")
+    @JsonProperty("writer")
+    private Writer writer;
+
+    public Writer getWriter() {
+        return writer;
+    }
+
+    public void setWriter(Writer writer) {
+        this.writer = writer;
+    }
+
     // for JPA only, no use
     public Book() {
+    }
+
+    public Book (Writer writer) {
+        super();
+        this.writer = writer;
     }
 
     // getters, setters and constructor
@@ -46,4 +62,7 @@ public class Book {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+
+
+
 }
